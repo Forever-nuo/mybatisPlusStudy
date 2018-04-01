@@ -78,9 +78,8 @@
                 <!--
                 性能分析插件
                 -->
-            <bean class="com.baomidou.mybatisplus.plugins.PerformanceInterceptor" p:maxTime="100" p:format="true">
+            <bean class="com.baomidou.mybatisplus.plugins.PerformanceInterceptor" p:maxTime="100" p:format="true"/>
 
-            </bean>
             </array>
         </property>
     </bean>
