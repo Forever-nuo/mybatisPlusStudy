@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>乐观锁插件的演示</title>
+    <title>热加载的演示</title>
     <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 
     <script>
 
         $(function () {
             // 开始写 jQuery 代码...
-            $("#乐观锁的演示").click(
+            $("#热加载的演示").click(
                 function () {
-                    $.get("../../version/updateVersion");
+                    $.get("../../plug/fresh");
                 }
             );
 
@@ -22,8 +22,8 @@
 
 </head>
 <body>
-        <button id="乐观锁的演示">
-            乐观锁的演示
+        <button id="热加载的演示">
+            热加载的演示
         </button>
 
 

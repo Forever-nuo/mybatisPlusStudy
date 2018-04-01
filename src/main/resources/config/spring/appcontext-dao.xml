@@ -71,6 +71,15 @@
         </property>
     </bean>
 
+    <!--热加载xml文件-->
+    <bean class="com.baomidou.mybatisplus.spring.MybatisMapperRefresh">
+        <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"/>
+        <constructor-arg name="mapperLocations" value="classpath*:config/mybatis/sqlmap/*.xml"/>
+        <constructor-arg name="delaySeconds" value="10"/>
+        <constructor-arg name="sleepSeconds" value="5"/>
+        <constructor-arg name="enabled" value="true"/>
+    </bean>
+
 
     <!-- MyBatis 动态扫描  -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">

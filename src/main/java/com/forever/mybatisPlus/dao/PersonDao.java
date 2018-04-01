@@ -26,4 +26,11 @@ public interface PersonDao extends BaseMapper<Person> {
      */
     List<Person> getPageDataFromXm(Page page, Integer age);
 
+
+    /**
+     * 热加载
+     * @return
+     */
+    List<Person> freshXmlData();
+
 }

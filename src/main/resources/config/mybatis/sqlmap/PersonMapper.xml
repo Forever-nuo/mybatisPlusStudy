@@ -15,5 +15,10 @@
         SELECT * FROM person WHERE  age>#{age}
     </select>
 
+    <!--热加载的演示-->
+    <select id="freshXmlData" resultType="Person">
+        SELECT  * FROM  person where 1= 1 and  6 =6
+    </select>
+
 
 </mapper>
