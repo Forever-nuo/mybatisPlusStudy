@@ -1,0 +1,26 @@
+SQL 执行分析拦截器【 目前只支持 MYSQL-5.6.3 以上版本 】
+作用是分析 处理 DELETE UPDATE 语句，
+防止小白或者恶意 delete update 全表操作！
+
+   <property name="plugins">
+            <array>
+                <!--
+                分页插件配置
+                localPage:设置为true,则能使用PageHelper对象
+                -->
+                <bean class="com.baomidou.mybatisplus.plugins.PaginationInterceptor" p:localPage="true"/>
+
+                <!--
+                执行分析插件的配置
+                SqlExplainInterceptor stopProcee 为true 执行全表删除的时候为异常报错
+                -->
+                <bean class="com.baomidou.mybatisplus.plugins.SqlExplainInterceptor" p:stopProceed="false"/>
+
+            </array>
+        </property>
+
+    注意！参数说明
+
+    参数：stopProceed 发现执行全表 delete update 语句是否停止执行
+
+    注意！该插件只用于开发环境，不建议生产环境使用。。。

@@ -68,6 +68,13 @@
                 localPage:设置为true,则能使用PageHelper对象
                 -->
                 <bean class="com.baomidou.mybatisplus.plugins.PaginationInterceptor" p:localPage="true"/>
+
+                <!--
+                执行分析插件的配置
+                SqlExplainInterceptor stopProcee 为true 执行全表删除的时候为异常报错
+                -->
+                <bean class="com.baomidou.mybatisplus.plugins.SqlExplainInterceptor" p:stopProceed="false"/>
+
             </array>
         </property>
     </bean>

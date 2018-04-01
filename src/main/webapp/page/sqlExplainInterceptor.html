@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>执行分析插件的演示</title>
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+    <script>
+
+        $(function () {
+            // 开始写 jQuery 代码...
+            $("#全表删除的拦截").click(
+                function () {
+                    $.get("../../sqlExplainInterceptor/deleteAll");
+                }
+            );
+
+
+        });
+
+    </script>
+
+</head>
+<body>
+        <button id="全表删除的拦截">
+            全表删除的拦截
+        </button>
+</body>
+</html>
