@@ -10,6 +10,7 @@
     </resultMap>
 
 
+
     <!--获得分页数据-->
     <select id="getPageDataFromXm" resultType="Person">
         SELECT * FROM person WHERE  age>#{age}

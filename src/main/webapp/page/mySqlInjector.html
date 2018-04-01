@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义sql演示</title>
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+    <script>
+
+        $(function () {
+            // 开始写 jQuery 代码...
+            $("#自定义sql演示").click(
+                function () {
+                    $.get("../../mysql/deleteAll");
+                }
+            );
+
+
+        });
+
+    </script>
+
+</head>
+<body>
+        <button id="自定义sql演示">
+            自定义sql演示
+        </button>
+
+        <a href="home.html">返回首页</a>
+</body>
+</html>

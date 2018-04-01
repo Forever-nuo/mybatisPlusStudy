@@ -2,6 +2,7 @@ package com.forever.mybatisPlus.dao;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.baomidou.mybatisplus.plugins.Page;
+import com.forever.mybatisPlus.injector.MyBaseMapper;
 import com.forever.mybatisPlus.model.Person;
 
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
  * @author Forever丶诺
  * @since 2018-03-31
  */
-public interface PersonDao extends BaseMapper<Person> {
+public interface PersonDao extends BaseMapper<Person>,MyBaseMapper<Person> {
 
 
     /**
@@ -32,5 +33,7 @@ public interface PersonDao extends BaseMapper<Person> {
      * @return
      */
     List<Person> freshXmlData();
+
+
 
 }

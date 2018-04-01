@@ -60,6 +60,7 @@
           p:mapperLocations="classpath:config/mybatis/sqlmap/*.xml"
           p:configLocation="classpath:/config/mybatis/mybatis-config.xml"
           p:typeAliasesPackage="com.forever.mybatisPlus.model"
+          p:globalConfig-ref="globalConfig"
     >
         <property name="plugins">
             <array>
@@ -80,6 +81,14 @@
         <constructor-arg name="enabled" value="true"/>
     </bean>
 
+
+    <!-- 定义 MP 全局策略，安装集成文档部分结合 -->
+    <bean id="globalConfig" class="com.baomidou.mybatisplus.entity.GlobalConfiguration">
+        <!-- 自定义注入 deleteAll 方法  -->
+        <property name="sqlInjector" ref="mySqlInjector" />
+    </bean>
+    <!-- 自定义注入器 -->
+    <bean id="mySqlInjector" class="com.forever.mybatisPlus.injector.MySqlInjector" />
 
     <!-- MyBatis 动态扫描  -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
