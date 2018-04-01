@@ -47,6 +47,7 @@
           <element id="library" level="project" name="Maven: org.apache.velocity:velocity-engine-core:2.0" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.5" />
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.16.20" />
+          <element id="library" level="project" name="Maven: p6spy:p6spy:3.0.0" />
         </element>
       </element>
     </root>

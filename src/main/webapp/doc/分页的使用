@@ -1,0 +1,25 @@
+####
+配置分页插件
+
+
+<bean id="sqlSessionFactory"
+     class="com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean"
+     p:dataSource-ref="dataSource"
+     p:mapperLocations="classpath:config/mybatis/sqlmap/*.xml"
+     p:configLocation="classpath:/config/mybatis/mybatis-config.xml"
+     p:typeAliasesPackage="com.forever.mybatisPlus.model"
+>
+   <property name="plugins">
+       <array>
+           <!-- 分页插件配置 -->
+           <bean class="com.baomidou.mybatisplus.plugins.PaginationInterceptor" p:localPage="true"/>
+       </array>
+   </property>
+</bean>
+
+####方式1 Page对象
+###使用SelectPage方法
+
+###方式2 将Page对象传入到Dao层的接口中
+
+###方式3: 使用PageHelper对象 获得分页数据

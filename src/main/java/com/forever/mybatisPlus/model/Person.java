@@ -19,12 +19,13 @@ import lombok.experimental.Accessors;
  * @since 2018-03-31
  */
 @Data
+@Accessors(chain = true)
 public class Person implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+    @TableId(type = IdType.ID_WORKER)
+    private Long id;
     private String name;
     private Integer age;
 

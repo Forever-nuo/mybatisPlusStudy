@@ -4,9 +4,16 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.forever.mybatisPlus.model.Person">
-        <id column="id" property="id" />
-        <result column="name" property="name" />
-        <result column="age" property="age" />
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="age" property="age"/>
     </resultMap>
+
+
+    <!--获得分页数据-->
+    <select id="getPageDataFromXm" resultType="Person">
+        SELECT * FROM person WHERE  age>#{age}
+    </select>
+
 
 </mapper>

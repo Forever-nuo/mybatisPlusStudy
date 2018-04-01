@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<title>分页的使用</title>
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+
+    $(function () {
+        // 开始写 jQuery 代码...
+        $("#获得分页参数1").click(
+            function () {
+                var param = {current: 1, size: 3};
+                $.get("../../page/getPageData", param);
+            }
+        );
+
+
+        $("#获得分页参数2").click(
+            function () {
+                var param = {current: 1, size: 2};
+                $.get("../../page/getPageDataFromXm", param);
+            }
+        );
+
+
+        $("#获得分页数据使用PageHelper").click(
+            function () {
+                var param = {current: 1, size: 2};
+                $.get("../../page/getPageDataByPageHelper", param);
+            }
+        );
+
+    });
+
+
+</script>
+
+</head>
+<body>
+
+
+<button id="获得分页参数1">获得分页数据从接口</button>:
+<div>
+    使用分页查询 从接口查询
+</div>
+<br><br>
+
+<button id="获得分页参数2">获得分页数据从sql语句</button>:
+<div>
+    使用分页查询 从xml文件获取
+</div>
+<br><br>
+
+
+<button id="获得分页数据使用PageHelper">获得分页数据使用PageHelper</button>:
+<div>
+    使用分页查询 从xml文件获取
+</div>
+<br><br>
+
+
+</body>
+</html>

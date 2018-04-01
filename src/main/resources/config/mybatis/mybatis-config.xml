@@ -34,4 +34,8 @@
         <setting name="defaultStatementTimeout" value="25000"/>
     </settings>
 
+    <typeAliases>
+        <typeAlias type="com.forever.mybatisPlus.model.Person" alias="Person"/>
+    </typeAliases>
+
 </configuration>
