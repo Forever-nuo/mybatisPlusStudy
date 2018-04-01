@@ -1,0 +1,57 @@
+
+
+    性能分析拦截器，用于输出每条 SQL 语句及其执行时间
+
+    使用如下：
+
+
+         <property name="plugins">
+                    <array>
+                        <!--
+                        分页插件配置
+                        localPage:设置为true,则能使用PageHelper对象
+                        -->
+                        <bean class="com.baomidou.mybatisplus.plugins.PaginationInterceptor" p:localPage="true"/>
+
+                        <!--
+                        执行分析插件的配置
+                        SqlExplainInterceptor stopProcee 为true 执行全表删除的时候为异常报错
+                        -->
+        <!--                <bean class="com.baomidou.mybatisplus.plugins.SqlExplainInterceptor" p:stopProceed="false"/>-->
+
+                        <!--
+                        性能分析插件
+                        -->
+                    <bean class="com.baomidou.mybatisplus.plugins.PerformanceInterceptor" p:maxTime="100" p:format="true">
+
+                    </bean>
+                    </array>
+                </property>
+
+
+
+//Spring boot方式
+@EnableTransactionManagement
+@Configuration
+@MapperScan("com.baomidou.cloud.service.*.mapper*")
+public class MybatisPlusConfig {
+
+    /**
+     * SQL执行效率插件
+     */
+    @Bean
+    @Profile({"dev","test"})// 设置 dev test 环境开启
+    public PerformanceInterceptor performanceInterceptor() {
+        return new PerformanceInterceptor();
+    }
+}
+
+    注意！参数说明
+
+    参数：maxTime SQL 执行最大时长，超过自动停止运行，有助于发现问题。
+    参数：format SQL SQL是否格式化，默认false。
+
+注意！该插件只用于开发环境，不建议生产环境使用。。。
+
+
+
