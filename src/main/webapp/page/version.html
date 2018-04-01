@@ -2,30 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>增删改查</title>
+    <title>乐观锁的演示</title>
     <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
 
     <script>
 
         $(function () {
             // 开始写 jQuery 代码...
-            $("#新增一个Bean").click(
+            $("#乐观锁的演示").click(
                 function () {
-                    $.get("../../person/addOne");
+                    $.get("../../version/updateVersion");
                 }
             );
+
+
         });
 
     </script>
+
 </head>
 <body>
-<h1>增删改查的演示</h1>
+        <button id="乐观锁的演示">
+            乐观锁的演示
+        </button>
 
 
-<button id="新增一个Bean">
-    新增一个Bean
-</button><br><br>
-
-
+        <a href="home.html">返回首页</a>
 </body>
 </html>

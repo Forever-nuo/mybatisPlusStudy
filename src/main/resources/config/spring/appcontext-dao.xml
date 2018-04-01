@@ -63,23 +63,10 @@
     >
         <property name="plugins">
             <array>
-                <!--
-                分页插件配置
-                localPage:设置为true,则能使用PageHelper对象
-                -->
+                <!-- 分页插件配置   -->
                 <bean class="com.baomidou.mybatisplus.plugins.PaginationInterceptor" p:localPage="true"/>
-
-                <!--
-                执行分析插件的配置
-                SqlExplainInterceptor stopProcee 为true 执行全表删除的时候为异常报错
-                -->
-<!--                <bean class="com.baomidou.mybatisplus.plugins.SqlExplainInterceptor" p:stopProceed="false"/>-->
-
-                <!--
-                性能分析插件
-                -->
-            <bean class="com.baomidou.mybatisplus.plugins.PerformanceInterceptor" p:maxTime="100" p:format="true"/>
-
+                <!--乐观锁插件 @version注解的使用-->
+                <bean class="com.baomidou.mybatisplus.plugins.OptimisticLockerInterceptor"/>
             </array>
         </property>
     </bean>

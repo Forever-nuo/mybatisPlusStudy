@@ -1,6 +1,8 @@
 package com.forever.mybatisPlus.model;
 
+import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.enums.FieldFill;
 import com.baomidou.mybatisplus.enums.IdType;
 import java.io.Serializable;
 
@@ -28,6 +30,9 @@ public class Person implements Serializable {
     private Long id;
     private String name;
     private Integer age;
+
+    @Version
+    private Integer version;
 
 
 }
