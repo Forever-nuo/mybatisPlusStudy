@@ -61,6 +61,7 @@
           p:configLocation="classpath:/config/mybatis/mybatis-config.xml"
           p:typeAliasesPackage="com.forever.mybatisPlus.model"
           p:globalConfig-ref="globalConfig"
+          p:typeEnumsPackage="com.forever.mybatisPlus.enums"
     >
         <property name="plugins">
             <array>

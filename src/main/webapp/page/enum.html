@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>枚举的自动注入演示</title>
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+    <script>
+
+        $(function () {
+            // 开始写 jQuery 代码...
+            $("#枚举的新增").click(
+                function () {
+                    $.get("../../enum/insert");
+                }
+            );
+
+            $("#枚举的查询").click(
+                function () {
+                    $.get("../../enum/selectAll");
+                }
+            );
+            $("#枚举的映射").click(
+                function () {
+                    var param = {
+                        age: 1,
+                        isDelete: 0
+                    }
+
+                    $.get("../../enum/getDataById",param);
+                }
+            );
+
+        });
+
+    </script>
+
+</head>
+<body>
+<button id="枚举的新增">
+    枚举的新增
+</button>
+<br><br>
+<button id="枚举的查询">
+    枚举的查询
+</button>
+<br><br>
+
+<button id="枚举的映射">
+    枚举的映射
+</button>
+<br><br>
+</body>
+</html>
