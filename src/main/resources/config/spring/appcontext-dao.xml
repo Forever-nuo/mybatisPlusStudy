@@ -80,6 +80,14 @@
             <bean class="com.baomidou.mybatisplus.mapper.LogicSqlInjector"/>
         </property>
 
+        <!--注入sequence 主键生成器-->
+
+      <!--  <property name="keyGenerator">
+            <bean class="com.baomidou.mybatisplus.incrementer.OracleKeyGenerator"></bean>
+        </property>-->
+
+
+
         <!-- 公共字段填充处理器 -->
         <property name="metaObjectHandler" >
             <bean class="com.forever.mybatisPlus.injector.MyMetaObjectHandler"/>

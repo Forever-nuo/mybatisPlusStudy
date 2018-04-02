@@ -1,5 +1,6 @@
 package com.forever.mybatisPlus.controller;
 
+import com.baomidou.mybatisplus.annotations.KeySequence;
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.forever.mybatisPlus.dao.TeacherDao;
 import com.forever.mybatisPlus.model.Teacher;
@@ -30,6 +31,7 @@ public class LogicSqlInjectorController {
      */
     @RequestMapping("/select")
     public void select() {
+
      /*
     SELECT
         id,
