@@ -78,6 +78,11 @@
         <property name="sqlInjector" >
             <bean class="com.forever.mybatisPlus.injector.MySqlInjector"/>
         </property>
+
+        <!-- 公共字段填充处理器 -->
+        <property name="metaObjectHandler" >
+            <bean class="com.forever.mybatisPlus.injector.MyMetaObjectHandler"/>
+        </property>
     </bean>
 
     <!--热加载xml文件-->

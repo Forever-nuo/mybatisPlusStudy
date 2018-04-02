@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公共字段自动填充的演示</title>
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+    <script>
+
+        $(function () {
+            // 开始写 jQuery 代码...
+            $("#新增一个Teacher").click(
+                function () {
+                    $.get("../../metaObjectHandler/insert");
+                }
+            );
+
+        });
+
+    </script>
+
+</head>
+<body>
+        <button id="新增一个Teacher">
+            新增一个Teacher
+        </button>
+</body>
+</html>
