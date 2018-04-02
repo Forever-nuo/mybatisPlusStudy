@@ -24,6 +24,6 @@ public class TeacherServiceImpl extends ServiceImpl<TeacherDao, Teacher> impleme
 
         @Override
         public void deleteAll() {
-                teacherDao.deleteAll();
+               // teacherDao.deleteAll();
         }
 }

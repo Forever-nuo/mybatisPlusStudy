@@ -31,6 +31,8 @@ public class MyMetaObjectHandler extends MetaObjectHandler {
 
     @Override
     public void updateFill(MetaObject metaObject) {
+
+
         //更新填充
         System.out.println("*************************");
         System.out.println("update fill");

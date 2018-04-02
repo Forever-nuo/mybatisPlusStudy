@@ -73,10 +73,11 @@
     </bean>
 
     <!-- 定义 MP 全局策略，安装集成文档部分结合 -->
-    <bean id="globalConfig" class="com.baomidou.mybatisplus.entity.GlobalConfiguration">
+    <bean id="globalConfig" class="com.baomidou.mybatisplus.entity.GlobalConfiguration"
+          p:logicDeleteValue="1" p:logicNotDeleteValue="0">
         <!-- 自定义注入 deleteAll 方法  -->
         <property name="sqlInjector" >
-            <bean class="com.forever.mybatisPlus.injector.MySqlInjector"/>
+            <bean class="com.baomidou.mybatisplus.mapper.LogicSqlInjector"/>
         </property>
 
         <!-- 公共字段填充处理器 -->

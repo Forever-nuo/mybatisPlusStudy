@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逻辑删除的演示</title>
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
+    <script>
+
+        $(function () {
+            // 开始写 jQuery 代码...
+            $("#删除操作").click(
+                function () {
+                    $.get("../../logicSqlInjector/delete");
+                }
+            );
+        });
+
+        //查询操作
+        $(function () {
+            // 开始写 jQuery 代码...
+            $("#查询操作").click(
+                function () {
+                    $.get("../../logicSqlInjector/select");
+                }
+            );
+        });
+
+    </script>
+
+</head>
+<body>
+        <button id="删除操作">
+            删除操作
+        </button><br><br>
+        <button id="查询操作">
+            查询操作
+        </button><br><br>
+</body>
+</html>
