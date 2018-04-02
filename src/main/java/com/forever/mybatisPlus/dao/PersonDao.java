@@ -15,7 +15,7 @@ import java.util.List;
  * @author Forever丶诺
  * @since 2018-03-31
  */
-public interface PersonDao extends BaseMapper<Person>,MyBaseMapper<Person> {
+public interface PersonDao extends MyBaseMapper<Person> {
 
 
     /**

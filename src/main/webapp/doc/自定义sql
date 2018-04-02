@@ -1,0 +1,5 @@
+1.写一个injector继承AutoSqlInjector
+2.配置globalConfig
+3.xml注入自定义的injector
+4.写一个接口 方法 和injector中的方法同名
+5.dao层接口 继承 自定义接口

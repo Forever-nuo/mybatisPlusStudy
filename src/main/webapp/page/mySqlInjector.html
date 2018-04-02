@@ -14,6 +14,11 @@
                     $.get("../../mysql/deleteAll");
                 }
             );
+            $("#Teacher的全部删除").click(
+                function () {
+                    $.get("../../teacher/deleteAll");
+                }
+            );
 
 
         });
@@ -24,6 +29,10 @@
 <body>
         <button id="自定义sql演示">
             自定义sql演示
+        </button>
+
+        <button id="Teacher的全部删除">
+            Teacher的全部删除
         </button>
 
         <a href="home.html">返回首页</a>

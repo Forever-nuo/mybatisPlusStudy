@@ -36,6 +36,7 @@
 
     <typeAliases>
         <typeAlias type="com.forever.mybatisPlus.model.Person" alias="Person"/>
+        <typeAlias type="com.forever.mybatisPlus.model.Teacher" alias="Teacher"/>
     </typeAliases>
 
 </configuration>
