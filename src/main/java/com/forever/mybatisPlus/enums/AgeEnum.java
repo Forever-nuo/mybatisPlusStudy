@@ -28,5 +28,4 @@ public enum AgeEnum implements IEnum {
         return this.desc;
     }
 
-
 }
